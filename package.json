@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "pretty-quick": "pretty-quick --staged",
     "lint-css": "stylelint src/**/*css",
-    "postinstall": "ng build --aot -prod"
+    "postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {
