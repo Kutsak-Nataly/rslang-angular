@@ -3,19 +3,20 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "lint-staged",
     "e2e": "ng e2e",
     "pretty-quick": "pretty-quick --staged",
     "lint-css": "stylelint src/**/*css",
-    "postinstall": "husky install"
+    "postinstall": "ng build --aot -prod"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~10.2.0",
     "@angular/cdk": "^10.2.7",
+    "@angular/cli": "~10.2.0",
     "@angular/common": "~10.2.0",
     "@angular/compiler": "~10.2.0",
     "@angular/core": "~10.2.0",
@@ -32,6 +33,7 @@
     "@ngrx/store-devtools": "^9.2.0",
     "@syncfusion/ej2-angular-charts": "^19.1.54",
     "@syncfusion/ej2-base": "^19.1.54",
+    "express": "^4.17.1",
     "ng-lint-staged": "^0.1.6",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
@@ -85,5 +87,9 @@
   },
   "lint-staged": {
     "*.{js,scss,ts,html,md}": "prettier --write"
+  },
+  "engines": {
+    "node": "12.11.1",
+    "npm": "6.14.8"
   }
 }
